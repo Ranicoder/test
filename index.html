@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Researcher Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            border: 3px solid white;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-bottom: 15px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+
+        .contact-links a:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .bio {
+            font-size: 1.05em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .research-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .research-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .research-item:hover {
+            transform: translateX(5px);
+            background: #e8ebf8;
+        }
+
+        .research-item h3 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .publications {
+            list-style: none;
+        }
+
+        .publication {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #764ba2;
+            transition: transform 0.3s;
+        }
+
+        .publication:hover {
+            transform: translateX(5px);
+            background: #e8ebf8;
+        }
+
+        .publication .title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .publication .authors {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 5px;
+        }
+
+        .publication .venue {
+            color: #764ba2;
+            font-style: italic;
+            font-size: 0.95em;
+        }
+
+        .education, .experience {
+            list-style: none;
+        }
+
+        .edu-item, .exp-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+
+        .edu-item:nth-child(odd), .exp-item:nth-child(odd) {
+            border-left-color: #764ba2;
+        }
+
+        .degree, .position {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .institution, .employer {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .year {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 40px 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .contact-links {
+                flex-direction: column;
+            }
+
+            .contact-links a {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="profile-image">👨‍🔬</div>
+            <h1>Dr. Jane Research</h1>
+            <p>Computer Science & Artificial Intelligence</p>
+            <p>University Research Institute</p>
+            <div class="contact-links">
+                <a href="mailto:jane@example.com">Email</a>
+                <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- About Section -->
+            <section class="section">
+                <h2>About</h2>
+                <p class="bio">
+                    I am a dedicated researcher with a passion for advancing knowledge in artificial intelligence and machine learning. 
+                    With over 8 years of experience in academic research and industry collaboration, I focus on developing innovative solutions 
+                    to complex computational problems. My work has been published in top-tier conferences and journals, and I actively 
+                    mentor students and junior researchers in my field.
+                </p>
+            </section>
+
+            <!-- Research Interests -->
+            <section class="section">
+                <h2>Research Interests</h2>
+                <div class="research-areas">
+                    <div class="research-item">
+                        <h3>Machine Learning</h3>
+                        <p>Deep learning, neural networks, and model optimization</p>
+                    </div>
+                    <div class="research-item">
+                        <h3>Natural Language Processing</h3>
+                        <p>Language models, semantic analysis, and text generation</p>
+                    </div>
+                    <div class="research-item">
+                        <h3>Computer Vision</h3>
+                        <p>Image processing, object detection, and visual recognition</p>
+                    </div>
+                    <div class="research-item">
+                        <h3>AI Ethics</h3>
+                        <p>Responsible AI, fairness, and algorithmic transparency</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publications -->
+            <section class="section">
+                <h2>Recent Publications</h2>
+                <ul class="publications">
+                    <li class="publication">
+                        <div class="title">Deep Learning Architectures for Efficient Computing</div>
+                        <div class="authors">Jane Research, John Doe, Alice Smith</div>
+                        <div class="venue">Proceedings of the International Conference on Machine Learning (ICML) 2024</div>
+                    </li>
+                    <li class="publication">
+                        <div class="title">Ethical Considerations in Modern AI Systems</div>
+                        <div class="authors">Jane Research, Bob Johnson</div>
+                        <div class="venue">Journal of AI Research and Development, Vol. 15, No. 3, 2024</div>
+                    </li>
+                    <li class="publication">
+                        <div class="title">Novel Approaches to Natural Language Understanding</div>
+                        <div class="authors">Jane Research, Carol White, David Lee</div>
+                        <div class="venue">Proceedings of the 2023 Conference on Computational Linguistics</div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Education -->
+            <section class="section">
+                <h2>Education</h2>
+                <ul class="education">
+                    <li class="edu-item">
+                        <div class="degree">Ph.D. in Computer Science</div>
+                        <div class="institution">Stanford University</div>
+                        <div class="year">2016 - 2020</div>
+                    </li>
+                    <li class="edu-item">
+                        <div class="degree">M.S. in Artificial Intelligence</div>
+                        <div class="institution">MIT</div>
+                        <div class="year">2014 - 2016</div>
+                    </li>
+                    <li class="edu-item">
+                        <div class="degree">B.S. in Computer Science</div>
+                        <div class="institution">UC Berkeley</div>
+                        <div class="year">2010 - 2014</div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Experience -->
+            <section class="section">
+                <h2>Experience</h2>
+                <ul class="experience">
+                    <li class="exp-item">
+                        <div class="position">Senior Researcher</div>
+                        <div class="employer">University Research Institute</div>
+                        <div class="year">2021 - Present</div>
+                    </li>
+                    <li class="exp-item">
+                        <div class="position">Postdoctoral Researcher</div>
+                        <div class="employer">Tech Research Laboratory</div>
+                        <div class="year">2020 - 2021</div>
+                    </li>
+                    <li class="exp-item">
+                        <div class="position">AI Research Intern</div>
+                        <div class="employer">Tech Company</div>
+                        <div class="year">2019 - 2020</div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
